@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven's Blog</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 自定義樣式 (配合 Bootstrap 使用) --- */
+        :root {
+            --primary-bg: #2c3e50;
+            --accent-color: #3498db;
+        }
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f4f7f6;
+            padding-top: 80px;
+        }
+        .navbar-custom {
+            background: linear-gradient(135deg, var(--primary-bg), #34495e);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: white !important;
+        }
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8) !important;
+            transition: color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: white !important;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+        section, article {
+            scroll-margin-top: 90px;
+        }
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+            margin-bottom: 20px;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar-card {
+            border-left: 4px solid var(--accent-color);
+        }
+        .table thead th {
+            background-color: var(--primary-bg);
+            color: white;
+            border: none;
+        }
+        .table {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        footer {
+            background-color: var(--primary-bg);
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body id="top">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#top">Steven's Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#top"> 首頁 </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section1"> 關於我 </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section2"> 就學經歷 </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section3"> 音樂作品 </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section4"> 影片作品 </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sectionGame"> 遊戲作品 </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section6"> 其他 </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"> 聯絡我 </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-4">
+        <div class="row">
+
+            <aside class="col-lg-3 mb-4">
+                <div class="card sidebar-card p-3 mb-3">
+                    <h5 class="card-title text-primary fw-bold"> 座右銘 </h5>
+                    <blockquote class="blockquote mb-0 fs-6">
+                        <p> 日日精進 </p>
+                    </blockquote>
+                </div>
+                <div class="card sidebar-card p-3">
+                    <h5 class="card-title text-primary fw-bold"> 天氣 </h5>
+                    <p class="card-text text-muted"> 好天氣預示著好的開始 </p>
+                    <img
+                        src="HTML-Personal Site/weather.jpg"
+                        alt="Sunny Weather"
+                        class="img-fluid rounded mb-2"
+                        onerror="this.src='https://placehold.co/300x200?text=Weather';this.onerror=null;">
+                    <a href= "https://www.google.com/search?q=天氣"  target="_blank" class="btn btn-outline-primary btn-sm w-100"> 天氣查詢  &rarr;</a>
+                </div>
+            </aside>
+            <main class="col-lg-9">
+                <article id="section1" class="card p-4">
+                    <div class="card-body">
+                        <h2 class="card-title text-primary fw-bold mb-3"> 關於我 </h2>
+                        <p class="card-text text-muted"> 本名蔡守博，目前是國立台北教育大學資訊科學系二年級生 </p>
+
+                        <div class="row g-3 align-items-center mt-2">
+                            <div class="col-md-5">
+                                <img
+                                    src="HTML-Personal Site/IMG_0282.JPG"
+                                    alt="Steven's Photo"
+                                    class="img-fluid rounded shadow-sm"
+                                    onerror="this.src='https://placehold.co/500x300?text=Stevens+Photo';this.onerror=null;">
+                            </div>
+                            <div class="col-md-7">
+                                <h3 class="h4">Steven</h3>
+                                <p class="mb-1">
+                                    <em><strong><a href="https://www.ntue.edu.tw/" target="_blank" class="text-decoration-none"> 國立台北教育大學 </a></strong>  學生示意照 </em>
+                                </p>
+                                <button class="btn btn-sm btn-info text-white mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#moreInfo" aria-expanded="false">
+                                    更多關於我
+                                </button>
+                                <div class="collapse mt-2" id="moreInfo">
+                                    <ul class="list-group list-group-flush small">
+                                        <li class="list-group-item bg-transparent"> 綽號: 包含但不限於蛋捲、捲心菜... </li>
+                                        <li class="list-group-item bg-transparent"> 巨蟹座 / 血型 B </li>
+                                        <li class="list-group-item bg-transparent"> 興趣: 拉小提琴、閱讀、騎腳踏車、打遊戲 </li>
+                                        <li class="list-group-item bg-transparent"> 努力學習 Coding 中 </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article id="section2" class="card p-4">
+                    <div class="card-body">
+                        <h2 class="card-title text-primary fw-bold mb-3"> 就學經歷 </h2>
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"> 日期 </th>
+                                        <th scope="col"> 學校 </th>
+                                        <th scope="col"> 經歷 </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2024-2025</td>
+                                        <td> 國立台北教育大學資訊科學系 </td>
+                                        <td> 系排隊員、常駐總務股長、前班代 </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2021-2023</td>
+                                        <td> 國立師範大學附屬高中 </td>
+                                        <td> 工研社小肺霧 </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2018-2021</td>
+                                        <td> 北市敦化國中 </td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </article>
+                <article id="section3" class="card p-4">
+                    <div class="card-body">
+                        <h2 class="card-title text-primary fw-bold mb-3"> 音樂作品 </h2>
+                        <div class="d-flex flex-wrap align-items-center gap-3">
+                            <img
+                                src="HTML-Personal Site/AIVA.png"
+                                alt="AIVA"
+                                class="rounded"
+                                width="120"
+                                height="120"
+                                onerror="this.src='https://placehold.co/120x120?text=Music';this.onerror=null;">
+                            <div>
+                                <a href="https://creators.aiva.ai/publicPlayer?c=68eca63a0e534708d486449e" target="_blank" class="btn btn-outline-success">
+                                    🎧 前往 AIVA 聆聽作品
+                                </a>
+                                <ul class="mt-3 mb-0 text-muted small">
+                                    <li> 使用 AI 音樂生成平台 AIVA 創作 </li>
+                                    <li> AI 有用到我偏好的小調及切分音 </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="section4" class="card p-4">
+                    <div class="card-body">
+                        <h2 class="card-title text-primary fw-bold mb-3"> 影片作品 </h2>
+
+                        <h5 class="card-title text-secondary fw-bold mb-2">Fly High 資科男排ver.</h5>
+                        <div class="ratio ratio-16x9 mb-3 rounded overflow-hidden">
+                            <iframe
+                                src="https://www.youtube.com/embed/KpqsmN9yDuE"
+                                title="Fly High 資科男排ver. 【排球少年第二季OP 2】"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <ul class="text-muted small mb-4">
+                            <li> 首先要感謝夠扛的隊友 </li>
+                            <li> 有人當躺分仔只負責簡報，不知道是誰，超過分 </li>
+                        </ul>
+
+                        <hr class="my-4">
+
+                        <h5 class="card-title text-secondary fw-bold mb-2">Flow 生成影片</h5>
+                        <div class="ratio ratio-16x9 mb-3 rounded overflow-hidden">
+                            <iframe
+                                src="https://www.youtube.com/embed/qyIJ4XR3I94"
+                                title="Flow Generated Video"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sectionGame" class="card p-4">
+                    <div class="card-body">
+                        <h2 class="card-title text-primary fw-bold mb-3"> 遊戲作品 </h2>
+                        <p class="card-text text-muted mb-3"> 
+                            <strong>霓虹跑酷 (Neon Runner)</strong> - 使用 Gemini 輔助生成的 HTML5 Canvas 跑酷遊戲。<br>
+                            <small>操作說明：電腦請按空白鍵跳躍，手機請點擊螢幕。</small>
+                        </p>
+                        <div class="ratio ratio-4x3 rounded overflow-hidden" style="min-height: 500px; background-color: #000;">
+                            <iframe style="border:0; width: 100%; height: 100%;" srcdoc="
+<!DOCTYPE html>
+<html lang=&quot;zh-TW&quot;>
+<head>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;>
+<title> 霓虹跑酷 Neon Runner </title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Sans+TC:wght@500;900&display=swap');
+body { margin: 0; padding: 0; overflow: hidden; background-color: #000; font-family: 'Noto Sans TC', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; color: white; user-select: none; -webkit-user-select: none; }
+#game-container { position: relative; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
+canvas { display: block; }
+#ui-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; display: flex; flex-direction: column; justify-content: space-between; padding: 20px; box-sizing: border-box; }
+.top-ui { display: flex; justify-content: space-between; align-items: flex-start; width: 100%; }
+.score-board { font-family: 'Black Ops One', cursive; font-size: 32px; text-shadow: 0 0 10px #0ff; color: #0ff; display: flex; gap: 10px; align-items: center; z-index: 20; }
+.status-panel { display: flex; flex-direction: column; gap: 5px; align-items: flex-end; }
+.author-name { font-family: 'Noto Sans TC', sans-serif; font-size: 18px; color: #fff; text-shadow: 0 0 8px #0ff; margin-bottom: 5px; font-weight: bold; letter-spacing: 1px; }
+.status-item { font-size: 18px; font-weight: bold; padding: 5px 10px; border-radius: 5px; text-shadow: 0 0 5px currentColor; opacity: 0; transition: opacity 0.3s; }
+#shield-status { color: #00ffcc; border: 1px solid #00ffcc; background: rgba(0, 255, 204, 0.2); }
+#giant-status { color: #0f0; border: 1px solid #0f0; background: rgba(0, 255, 0, 0.2); }
+.visible { opacity: 1 !important; }
+#start-screen, #game-over-screen { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; background: rgba(0, 0, 0, 0.9); padding: 40px; border-radius: 15px; border: 2px solid #0ff; box-shadow: 0 0 30px rgba(0, 255, 255, 0.3), inset 0 0 20px rgba(0, 255, 255, 0.2); pointer-events: auto; display: flex; flex-direction: column; gap: 20px; min-width: 320px; backdrop-filter: blur(10px); z-index: 100; }
+h1 { margin: 0; font-family: 'Black Ops One', cursive; font-size: 48px; background: linear-gradient(45deg, #0ff, #f0f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-transform: uppercase; letter-spacing: 2px; }
+p { font-size: 18px; color: #ccc; margin: 5px 0; }
+.legend { display: flex; justify-content: center; gap: 15px; margin: 10px 0; font-size: 14px; flex-wrap: wrap; }
+.legend-item { display: flex; align-items: center; gap: 5px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.icon-box { width: 16px; height: 16px; display: inline-block; border: 1px solid white; text-align: center; line-height: 14px; font-size: 10px;}
+.btn { background: transparent; color: #0ff; border: 2px solid #0ff; padding: 15px 30px; font-size: 24px; font-family: 'Black Ops One', cursive; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; border-radius: 5px; margin-top: 10px; }
+.btn:hover { background: #0ff; color: #000; box-shadow: 0 0 30px #0ff; }
+.hidden { display: none !important; }
+.controls-hint { margin-top: 10px; font-size: 14px; color: #888; }
+.key { display: inline-block; border: 1px solid #666; border-radius: 4px; padding: 2px 6px; background: #333; font-family: monospace; font-size: 0.8em; margin: 0 2px; }
+</style>
+</head>
+<body>
+<div id=&quot;game-container&quot;>
+<canvas id=&quot;gameCanvas&quot;></canvas>
+<div id=&quot;ui-layer&quot;>
+<div class=&quot;top-ui&quot;>
+<div class=&quot;score-board&quot;>
+<span>$ <span id=&quot;scoreVal&quot;>0</span></span>
+</div>
+<div class=&quot;status-panel&quot;>
+<div class=&quot;author-name&quot;> 作者: 蔡守博 </div>
+<div id=&quot;giant-status&quot; class=&quot;status-item&quot;> 巨大化 (+1命) </div>
+<div id=&quot;shield-status&quot; class=&quot;status-item&quot;> 護盾:  <span id=&quot;shield-timer&quot;>0</span>s</div>
+</div>
+</div>
+</div>
+<div id=&quot;start-screen&quot;>
+<h1> 霓虹跑酷 <br><span style=&quot;font-size: 24px; -webkit-text-fill-color: white;&quot;>Power-Up Edition</span></h1>
+<p> 收集金幣得分，善用道具存活！ </p>
+<div class=&quot;legend&quot;>
+<div class=&quot;legend-item&quot;><span class=&quot;dot&quot; style=&quot;background:#ffd700;&quot;></span>  小金幣(+5) </div>
+<div class=&quot;legend-item&quot;><span class=&quot;dot&quot; style=&quot;background:#ffaa00; box-shadow: 0 0 5px gold;&quot;></span>  大金幣(+10) </div>
+<div class=&quot;legend-item&quot;><span class=&quot;icon-box&quot; style=&quot;background:#0f0; color:black&quot;>M</span>  巨大蘑菇 </div>
+<div class=&quot;legend-item&quot;><span class=&quot;icon-box&quot; style=&quot;background:#00ffcc; color:black&quot;>S</span>  無敵護盾 </div>
+</div>
+<div class=&quot;controls-hint&quot;>
+電腦：按  <span class=&quot;key&quot;>Space</span>  或  <span class=&quot;key&quot;> ↑ </span><br>
+手機：點擊螢幕
+</div>
+<button class=&quot;btn&quot; onclick=&quot;startGame()&quot;> 開始遊戲 </button>
+</div>
+<div id=&quot;game-over-screen&quot; class=&quot;hidden&quot;>
+<h1> 遊戲結束 </h1>
+<p> 最終金幣 </p>
+<div id=&quot;final-score&quot; style=&quot;font-size: 48px; color: #ffd700; font-family: 'Black Ops One';&quot;>0</div>
+<button class=&quot;btn&quot; onclick=&quot;resetGame()&quot;> 再玩一次 </button>
+</div>
+</div>
+<script>
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+const scoreEl = document.getElementById('scoreVal');
+const finalScoreEl = document.getElementById('final-score');
+const startScreen = document.getElementById('start-screen');
+const gameOverScreen = document.getElementById('game-over-screen');
+const shieldStatusEl = document.getElementById('shield-status');
+const giantStatusEl = document.getElementById('giant-status');
+const shieldTimerEl = document.getElementById('shield-timer');
+let GAME_SPEED_START = 5.5;
+let GRAVITY = 0.6;
+let JUMP_FORCE = -12;
+let gameSpeed = GAME_SPEED_START;
+let score = 0;
+let isGameRunning = false;
+let frameId;
+let totalFrames = 0;
+let globalHue = 240;
+let player;
+let obstacles = [];
+let platforms = [];
+let canyons = [];
+let coins = [];
+let items = [];
+let particles = [];
+let backgroundStars = [];
+let backgroundBuildings = [];
+let spawnTimer = 0;
+let extraDelay = 0;
+let groundY;
+function resize() {
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+groundY = canvas.height - 100;
+}
+window.addEventListener('resize', () => {
+resize();
+if(!isGameRunning && player) {
+player.y = groundY - player.h;
+}
+});
+resize();
+class Player {
+constructor() {
+this.baseW = 40;
+this.baseH = 40;
+this.w = this.baseW;
+this.h = this.baseH;
+this.x = 100;
+this.y = groundY - this.h;
+this.dy = 0;
+this.jumpCount = 0;
+this.maxJumps = 2;
+this.color = '#0ff';
+this.rotation = 0;
+this.onGround = true;
+this.isDead = false;
+this.isGiant = false;
+this.hasShield = false;
+this.shieldTimer = 0;
+this.flashTimer = 0;
+}
+jump() {
+if (this.jumpCount < this.maxJumps) {
+this.dy = JUMP_FORCE;
+if(this.isGiant) this.dy = JUMP_FORCE * 0.9;
+this.jumpCount++;
+this.onGround = false;
+createDust(this.x + this.w/2, this.y + this.h);
+this.rotation = 0;
+}
+}
+activateShield() {
+this.hasShield = true;
+this.shieldTimer = 300;
+shieldStatusEl.classList.add('visible');
+}
+activateGiant() {
+if(!this.isGiant) {
+this.isGiant = true;
+this.w = this.baseW * 1.8;
+this.h = this.baseH * 1.8;
+this.y -= this.h - this.baseH;
+giantStatusEl.classList.add('visible');
+createExplosion(this.x + this.w/2, this.y + this.h/2, '#0f0');
+}
+}
+deactivateGiant() {
+if(this.isGiant) {
+this.isGiant = false;
+this.y += this.h - this.baseH;
+this.w = this.baseW;
+this.h = this.baseH;
+giantStatusEl.classList.remove('visible');
+this.flashTimer = 30;
+createExplosion(this.x + this.w/2, this.y + this.h/2, '#fff');
+}
+}
+update() {
+let currentGravity = GRAVITY;
+if(this.isGiant) currentGravity = GRAVITY * 1.2;
+this.dy += currentGravity;
+this.y += this.dy;
+if (!this.onGround) {
+this.rotation += this.isGiant ? 0.05 : 0.1;
+} else {
+this.rotation = 0;
+}
+this.onGround = false;
+if (this.hasShield) {
+this.shieldTimer--;
+shieldTimerEl.innerText = Math.ceil(this.shieldTimer / 60);
+if (this.shieldTimer <= 0) {
+this.hasShield = false;
+shieldStatusEl.classList.remove('visible');
+}
+}
+if(this.flashTimer > 0) this.flashTimer--;
+let overCanyon = false;
+let centerX = this.x + this.w/2;
+for (let c of canyons) {
+if (centerX > c.x && centerX < c.x + c.w) {
+overCanyon = true;
+break;
+}
+}
+if (this.y + this.h >= groundY) {
+if (!overCanyon) {
+this.y = groundY - this.h;
+this.dy = 0;
+this.onGround = true;
+this.jumpCount = 0;
+}
+}
+platforms.forEach(p => {
+if (this.x + this.w > p.x && this.x < p.x + p.w) {
+if (this.dy >= 0 &&
+this.y + this.h >= p.y &&
+this.y + this.h <= p.y + p.h + this.dy + 15) {
+if (this.y + this.h - this.dy <= p.y + 20) {
+this.y = p.y - this.h;
+this.dy = 0;
+this.onGround = true;
+this.jumpCount = 0;
+}
+}
+}
+});
+if (this.y > canvas.height + 100) {
+gameOver();
+}
+}
+draw() {
+if(this.flashTimer > 0 && Math.floor(totalFrames / 4) % 2 === 0) return;
+ctx.save();
+ctx.translate(this.x + this.w/2, this.y + this.h/2);
+ctx.rotate(this.rotation);
+let drawColor = this.isGiant ? '#0f0' : this.color;
+ctx.shadowBlur = 20;
+ctx.shadowColor = drawColor;
+ctx.fillStyle = drawColor;
+ctx.fillRect(-this.w/2, -this.h/2, this.w, this.h);
+ctx.fillStyle = '#fff';
+ctx.shadowBlur = 0;
+ctx.fillRect(-this.w/2 + (this.isGiant?16:8), -this.h/2 + (this.isGiant?16:8), this.w - (this.isGiant?32:16), this.h - (this.isGiant?32:16));
+ctx.restore();
+if (this.hasShield) {
+ctx.save();
+ctx.translate(this.x + this.w/2, this.y + this.h/2);
+ctx.strokeStyle = '#00ffcc';
+ctx.lineWidth = 3;
+ctx.shadowBlur = 10;
+ctx.shadowColor = '#00ffcc';
+ctx.beginPath();
+let size = (Math.max(this.w, this.h) * 0.8) + Math.sin(totalFrames * 0.1) * 5;
+ctx.arc(0, 0, size, 0, Math.PI * 2);
+ctx.stroke();
+ctx.fillStyle = 'rgba(0, 255, 204, 0.2)';
+ctx.fill();
+ctx.restore();
+}
+if (isGameRunning && totalFrames % 5 === 0) {
+particles.push(new Particle(this.x, this.y + this.h/2, -gameSpeed, 0, this.w, this.h, 'rgba(0, 255, 255, 0.2)', true));
+}
+}
+}
+class Platform {
+constructor(x, y, w) {
+this.x = x;
+this.y = y;
+this.w = w;
+this.h = 20;
+this.markedForDeletion = false;
+}
+update() {
+this.x -= gameSpeed;
+if (this.x + this.w < -100) this.markedForDeletion = true;
+}
+draw() {
+ctx.shadowBlur = 10;
+ctx.shadowColor = '#00ffcc';
+ctx.fillStyle = '#003333';
+ctx.fillRect(this.x, this.y, this.w, this.h);
+ctx.strokeStyle = '#00ffcc';
+ctx.lineWidth = 2;
+ctx.strokeRect(this.x, this.y, this.w, this.h);
+ctx.fillStyle = '#00ffcc';
+for(let i=10; i<this.w; i+=40) {
+ctx.fillRect(this.x + i, this.y + 5, 20, 10);
+}
+ctx.shadowBlur = 0;
+}
+}
+class Canyon {
+constructor(x, w) {
+this.x = x;
+this.w = w;
+this.markedForDeletion = false;
+}
+update() {
+this.x -= gameSpeed;
+if (this.x + this.w < -100) this.markedForDeletion = true;
+}
+}
+class Obstacle {
+constructor(x, y, type) {
+this.x = x;
+this.y = y;
+this.type = type;
+this.markedForDeletion = false;
+this.isDestroyed = false;
+if (type === 4) {
+this.w = 40;
+this.h = 40;
+this.color = '#cc00ff';
+this.initialY = y - 80;
+this.y = this.initialY;
+this.moveOffset = Math.random() * 100;
+} else if (type === 5) {
+this.w = 40;
+this.h = 40;
+this.color = '#ff6600';
+this.y = y - this.h;
+} else if (type === 6) {
+this.w = 50;
+this.h = 20;
+this.color = '#ff0033';
+this.y = y - 60;
+} else if (type === 0) {
+this.w = 50;
+this.h = 50;
+this.color = '#ff0055';
+this.y = y - this.h;
+} else if (type === 1) {
+this.w = 40;
+this.h = 40;
+this.color = '#ff0000';
+this.y = y - this.h;
+} else if (type === 2) {
+this.w = 50;
+this.h = 80;
+this.color = '#ff4500';
+this.y = y - this.h;
+} else if (type === 3) {
+this.w = 80;
+this.h = 40;
+this.color = '#ff0000';
+this.y = y - this.h;
+}
+}
+update() {
+if(this.isDestroyed) {
+this.markedForDeletion = true;
+return;
+}
+this.x -= gameSpeed;
+if (this.type === 4) {
+this.y = this.initialY + Math.sin((totalFrames + this.moveOffset) * 0.05) * 50;
+} else if (this.type === 5) {
+this.x -= 3.5;
+} else if (this.type === 6) {
+this.x -= 6;
+}
+if (this.x + this.w < -100) {
+this.markedForDeletion = true;
+}
+}
+draw() {
+if(this.isDestroyed) return;
+ctx.shadowBlur = 15;
+ctx.shadowColor = this.color;
+ctx.fillStyle = this.color;
+if (this.type === 4) {
+ctx.beginPath();
+ctx.arc(this.x + this.w/2, this.y + this.h/2, 15, 0, Math.PI*2);
+ctx.fill();
+ctx.strokeStyle = '#ffff00';
+ctx.lineWidth = 3;
+ctx.beginPath();
+ctx.moveTo(this.x + this.w/2 - 25, this.y + this.h/2);
+ctx.lineTo(this.x + this.w/2 + 25, this.y + this.h/2);
+ctx.stroke();
+ctx.beginPath();
+ctx.moveTo(this.x + this.w/2, this.y + this.h/2 - 25);
+ctx.lineTo(this.x + this.w/2, this.y + this.h/2 + 25);
+ctx.stroke();
+} else if (this.type === 5) {
+ctx.save();
+ctx.translate(this.x + this.w/2, this.y + this.h/2);
+ctx.rotate(-totalFrames * 0.2);
+ctx.beginPath();
+ctx.arc(0, 0, this.w/2 - 5, 0, Math.PI*2);
+ctx.fill();
+ctx.fillStyle = '#fff';
+for(let i=0; i<8; i++) {
+ctx.rotate(Math.PI/4);
+ctx.beginPath();
+ctx.moveTo(10, -5);
+ctx.lineTo(25, 0);
+ctx.lineTo(10, 5);
+ctx.fill();
+}
+ctx.restore();
+} else if (this.type === 6) {
+ctx.fillRect(this.x, this.y, this.w, this.h);
+ctx.beginPath();
+ctx.moveTo(this.x, this.y);
+ctx.lineTo(this.x - 15, this.y + this.h/2);
+ctx.lineTo(this.x, this.y + this.h);
+ctx.fill();
+if (Math.random() > 0.5) {
+ctx.fillStyle = '#ffff00';
+ctx.fillRect(this.x + this.w, this.y + 5, 20, 10);
+}
+} else if (this.type === 1 || this.type === 3) {
+ctx.beginPath();
+if(this.type === 1) {
+ctx.moveTo(this.x, this.y + this.h);
+ctx.lineTo(this.x + this.w / 2, this.y);
+ctx.lineTo(this.x + this.w, this.y + this.h);
+} else {
+ctx.moveTo(this.x, this.y + this.h);
+ctx.lineTo(this.x + this.w / 4, this.y);
+ctx.lineTo(this.x + this.w / 2, this.y + this.h);
+ctx.lineTo(this.x + (this.w / 4) * 3, this.y);
+ctx.lineTo(this.x + this.w, this.y + this.h);
+}
+ctx.fill();
+} else if (this.type === 2) {
+ctx.fillRect(this.x + 5, this.y, this.w - 10, this.h);
+ctx.fillRect(this.x, this.y, this.w, 20);
+ctx.fillStyle = '#800000';
+ctx.fillRect(this.x + 10, this.y + 30, this.w - 20, 5);
+ctx.fillRect(this.x + 10, this.y + 50, this.w - 20, 5);
+} else {
+ctx.fillRect(this.x, this.y, this.w, this.h);
+ctx.fillStyle = '#000';
+ctx.fillRect(this.x + 10, this.y + 10, 10, 10);
+ctx.fillRect(this.x + 30, this.y + 10, 10, 10);
+}
+ctx.shadowBlur = 0;
+}
+}
+class Coin {
+constructor(x, y, type = 'small') {
+this.x = x;
+this.y = y;
+this.type = type;
+if (type === 'big') {
+this.w = 36;
+this.h = 36;
+this.value = 10;
+this.color = '#ffaa00';
+} else {
+this.w = 24;
+this.h = 24;
+this.value = 5;
+this.color = '#ffd700';
+}
+this.markedForDeletion = false;
+this.collected = false;
+this.floatOffset = Math.random() * Math.PI * 2;
+}
+update() {
+this.x -= gameSpeed;
+this.floatOffset += 0.1;
+if (!this.collected && checkRectCollision(player, {x: this.x, y: this.y + Math.sin(this.floatOffset)*5, w: this.w, h: this.h}, 0)) {
+this.collected = true;
+addScore(this.value);
+createSparkles(this.x + this.w/2, this.y + this.h/2, this.color);
+}
+if (this.x + this.w < -100) this.markedForDeletion = true;
+}
+draw() {
+if (this.collected) return;
+let drawY = this.y + Math.sin(this.floatOffset) * 5;
+ctx.save();
+ctx.translate(this.x + this.w/2, drawY + this.h/2);
+let scaleX = Math.abs(Math.sin(this.floatOffset * 0.5));
+ctx.scale(scaleX, 1);
+ctx.shadowBlur = 15;
+ctx.shadowColor = this.color;
+ctx.strokeStyle = this.color;
+ctx.lineWidth = 4;
+ctx.beginPath();
+ctx.arc(0, 0, this.w/2, 0, Math.PI * 2);
+ctx.stroke();
+ctx.fillStyle = this.color;
+ctx.font = 'bold ' + (this.type==='big'? '20px' : '14px') + ' &quot;Black Ops One&quot;';
+ctx.textAlign = 'center';
+ctx.textBaseline = 'middle';
+ctx.fillText('$', 0, 1);
+ctx.restore();
+}
+}
+class PowerUp {
+constructor(x, y, type) {
+this.x = x;
+this.y = y;
+this.w = 36;
+this.h = 36;
+this.type = type;
+this.markedForDeletion = false;
+this.collected = false;
+}
+update() {
+this.x -= gameSpeed;
+if (!this.collected && checkRectCollision(player, this, 0)) {
+this.collected = true;
+if (this.type === 'mushroom') {
+player.activateGiant();
+} else if (this.type === 'shield') {
+player.activateShield();
+}
+createExplosion(this.x + this.w/2, this.y + this.h/2, this.type === 'shield' ? '#00ffcc' : '#0f0');
+}
+if (this.x + this.w < -100) this.markedForDeletion = true;
+}
+draw() {
+if(this.collected) return;
+ctx.save();
+ctx.translate(this.x + this.w/2, this.y + this.h/2);
+if (this.type === 'shield') {
+ctx.shadowBlur = 15;
+ctx.shadowColor = '#00ffcc';
+ctx.fillStyle = 'rgba(0, 255, 204, 0.3)';
+ctx.beginPath();
+ctx.arc(0, 0, 18, 0, Math.PI * 2);
+ctx.fill();
+ctx.strokeStyle = '#00ffcc';
+ctx.lineWidth = 2;
+ctx.stroke();
+ctx.fillStyle = '#fff';
+ctx.font = 'bold 16px &quot;Noto Sans TC&quot;';
+ctx.textAlign = 'center';
+ctx.textBaseline = 'middle';
+ctx.fillText('S', 0, 1);
+} else {
+ctx.shadowBlur = 15;
+ctx.shadowColor = '#0f0';
+ctx.fillStyle = '#0f0';
+ctx.fillRect(-15, -15, 30, 30);
+ctx.fillStyle = '#fff';
+ctx.font = 'bold 16px &quot;Noto Sans TC&quot;';
+ctx.textAlign = 'center';
+ctx.textBaseline = 'middle';
+ctx.fillText('M', 0, 1);
+}
+ctx.restore();
+}
+}
+class Particle {
+constructor(x, y, vx, vy, w, h, color, isTrail = false) {
+this.x = x;
+this.y = y;
+this.vx = vx;
+this.vy = vy;
+this.w = w;
+this.h = h;
+this.color = color;
+this.life = 1.0;
+this.isTrail = isTrail;
+}
+update() {
+this.x += this.vx;
+this.y += this.vy;
+this.life -= this.isTrail ? 0.05 : 0.03;
+if(this.isTrail) {
+this.w *= 0.9;
+this.h *= 0.9;
+}
+}
+draw() {
+ctx.globalAlpha = Math.max(0, this.life);
+ctx.fillStyle = this.color;
+if (this.isTrail) {
+ctx.fillRect(this.x, this.y, this.w, this.h);
+} else {
+ctx.beginPath();
+ctx.arc(this.x, this.y, this.w, 0, Math.PI * 2);
+ctx.fill();
+}
+ctx.globalAlpha = 1.0;
+}
+}
+class Building {
+constructor(x, w, h, speedFactor, colorHue) {
+this.x = x;
+this.w = w;
+this.h = h;
+this.speedFactor = speedFactor;
+this.markedForDeletion = false;
+this.colorHue = colorHue;
+this.windows = [];
+let rows = Math.floor(h / 30);
+let cols = Math.floor(w / 20);
+for(let r=0; r<rows; r++) {
+for(let c=0; c<cols; c++) {
+if(Math.random() > 0.6) {
+this.windows.push({
+x: c * 20 + 5,
+y: r * 30 + 10,
+on: Math.random() > 0.3
+});
+}
+}
+}
+}
+update() {
+this.x -= gameSpeed * this.speedFactor;
+if (this.x + this.w < -200) this.markedForDeletion = true;
+}
+draw() {
+ctx.fillStyle = `hsl(${this.colorHue}, 30%, 10%)`;
+ctx.fillRect(this.x, canvas.height - this.h, this.w, this.h);
+ctx.fillStyle = `hsla(${this.colorHue}, 80%, 70%, 0.3)`;
+this.windows.forEach(win => {
+if (win.on) {
+if(Math.random() > 0.99) win.on = false;
+ctx.fillRect(this.x + win.x, canvas.height - this.h + win.y, 10, 15);
+} else {
+if(Math.random() > 0.999) win.on = true;
+}
+});
+ctx.fillStyle = `hsl(${this.colorHue}, 80%, 50%)`;
+ctx.fillRect(this.x, canvas.height - this.h, this.w, 2);
+}
+}
+function createDust(x, y) {
+for (let i = 0; i < 5; i++) {
+particles.push(new Particle(x, y, (Math.random() - 0.5) * 4, (Math.random() - 1) * 2, Math.random() * 5 + 2, 0, '#aaa'));
+}
+}
+function createSparkles(x, y, color = '#ffd700') {
+for (let i = 0; i < 10; i++) {
+particles.push(new Particle(x, y, (Math.random() - 0.5) * 6, (Math.random() - 0.5) * 6, 4, 0, color));
+}
+}
+function createExplosion(x, y, color) {
+if(!color) color = Math.random() < 0.5 ? '#ff0000' : '#ff4500';
+for (let i = 0; i < 30; i++) {
+particles.push(new Particle(x, y, (Math.random() - 0.5) * 15, (Math.random() - 0.5) * 15, Math.random() * 6 + 2, 0, color));
+}
+}
+function checkRectCollision(r1, r2, padding = 14) {
+return (
+r1.x + padding < r2.x + r2.w - padding &&
+r1.x + r1.w - padding > r2.x + padding &&
+r1.y + padding < r2.y + r2.h - padding &&
+r1.y + r1.h - padding > r2.y + padding
+);
+}
+function addScore(val) {
+score += val;
+scoreEl.innerText = score;
+if (score % 50 === 0) gameSpeed += 0.2;
+}
+function spawnCoinRow(x, y, count, type='small') {
+for(let i=0; i<count; i++) {
+coins.push(new Coin(x + i * 40, y, type));
+}
+}
+function spawnCoinArc(x, y, count, type='small') {
+for(let i=0; i<count; i++) {
+let offset = Math.sin((i / count) * Math.PI) * -80;
+coins.push(new Coin(x + i * 40, y + offset, type));
+}
+}
+function spawnBuilding() {
+if(Math.random() < 0.02) {
+let h = Math.random() * 300 + 200;
+let w = Math.random() * 100 + 80;
+backgroundBuildings.push(new Building(canvas.width, w, h, 0.2, globalHue));
+}
+if(Math.random() < 0.01) {
+let h = Math.random() * 150 + 50;
+let w = Math.random() * 60 + 40;
+backgroundBuildings.push(new Building(canvas.width, w, h, 0.5, (globalHue + 30) % 360));
+}
+backgroundBuildings.sort((a,b) => a.speedFactor - b.speedFactor);
+}
+function spawnPattern() {
+const patternType = Math.floor(Math.random() * 21);
+const startX = canvas.width + 100;
+extraDelay = 0;
+if (patternType === 0) {
+obstacles.push(new Obstacle(startX, groundY, 0));
+platforms.push(new Platform(startX - 20, groundY - 140, 100));
+spawnCoinArc(startX - 20, groundY - 120, 3, 'small');
+}
+else if (patternType === 1) {
+obstacles.push(new Obstacle(startX, groundY, 4));
+platforms.push(new Platform(startX - 50, groundY - 160, 250));
+spawnCoinRow(startX - 20, groundY - 200, 3, 'big');
+}
+else if (patternType === 2) {
+let width = 180;
+canyons.push(new Canyon(startX, width));
+platforms.push(new Platform(startX - 20, groundY - 120, width + 40));
+spawnCoinArc(startX, groundY - 80, 5, 'small');
+extraDelay = 20;
+}
+else if (patternType === 3) {
+let pWidth = 600;
+platforms.push(new Platform(startX, groundY - 120, pWidth));
+obstacles.push(new Obstacle(startX + 150, groundY - 120, 1));
+obstacles.push(new Obstacle(startX + 400, groundY - 120, 1));
+spawnCoinRow(startX + 200, groundY - 170, 4, 'small');
+if(Math.random() > 0.5) items.push(new PowerUp(startX + 300, groundY - 170, 'mushroom'));
+extraDelay = 50;
+}
+else if (patternType === 4) {
+obstacles.push(new Obstacle(startX, groundY, 4));
+obstacles.push(new Obstacle(startX + 250, groundY, 4));
+platforms.push(new Platform(startX - 50, groundY - 160, 400));
+spawnCoinRow(startX + 50, groundY - 210, 3, 'big');
+}
+else if (patternType === 5) {
+platforms.push(new Platform(startX, groundY - 80, 120));
+platforms.push(new Platform(startX + 160, groundY - 160, 120));
+platforms.push(new Platform(startX + 320, groundY - 240, 120));
+spawnCoinRow(startX, groundY - 130, 2, 'small');
+spawnCoinRow(startX + 160, groundY - 210, 2, 'small');
+obstacles.push(new Obstacle(startX + 200, groundY, 3));
+items.push(new PowerUp(startX + 320, groundY - 300, 'shield'));
+extraDelay = 40;
+}
+else if (patternType === 6) {
+let cWidth = 300;
+canyons.push(new Canyon(startX, cWidth));
+platforms.push(new Platform(startX + 80, groundY - 50, 100));
+obstacles.push(new Obstacle(startX + 130, groundY - 50, 1));
+spawnCoinRow(startX + 80, groundY - 100, 3, 'small');
+platforms.push(new Platform(startX - 20, groundY - 180, 400));
+extraDelay = 30;
+}
+else if (patternType === 7) {
+obstacles.push(new Obstacle(startX, groundY, 1));
+platforms.push(new Platform(startX - 50, groundY - 140, 250));
+obstacles.push(new Obstacle(startX + 50, groundY - 140, 1));
+coins.push(new Coin(startX + 120, groundY - 190, 'big'));
+}
+else if (patternType === 8) {
+let pWidth = 500;
+platforms.push(new Platform(startX, groundY - 140, pWidth));
+obstacles.push(new Obstacle(startX + 150, groundY, 2));
+obstacles.push(new Obstacle(startX + 350, groundY, 2));
+spawnCoinRow(startX + 150, groundY - 190, 8, 'small');
+extraDelay = 40;
+}
+else if (patternType === 9) {
+canyons.push(new Canyon(startX, 450));
+platforms.push(new Platform(startX + 50, groundY - 50, 60));
+platforms.push(new Platform(startX + 180, groundY - 50, 60));
+platforms.push(new Platform(startX + 310, groundY - 50, 60));
+spawnCoinRow(startX + 50, groundY - 100, 8, 'small');
+platforms.push(new Platform(startX, groundY - 200, 500));
+extraDelay = 50;
+}
+else if (patternType === 10) {
+obstacles.push(new Obstacle(startX, groundY, 2));
+platforms.push(new Platform(startX - 60, groundY - 80, 60));
+}
+else if (patternType === 11) {
+spawnCoinArc(startX, groundY - 50, 8, 'small');
+spawnCoinArc(startX + 300, groundY - 50, 8, 'small');
+obstacles.push(new Obstacle(startX + 300, groundY, 1));
+platforms.push(new Platform(startX + 250, groundY - 140, 150));
+extraDelay = 40;
+}
+else if (patternType === 12) {
+platforms.push(new Platform(startX, groundY - 220, 500));
+platforms.push(new Platform(startX + 50, groundY - 100, 100));
+platforms.push(new Platform(startX + 250, groundY - 100, 100));
+obstacles.push(new Obstacle(startX + 200, groundY - 50, 4));
+spawnCoinRow(startX + 50, groundY - 150, 3, 'big');
+obstacles.push(new Obstacle(startX + 100, groundY, 3));
+obstacles.push(new Obstacle(startX + 300, groundY, 1));
+extraDelay = 50;
+}
+else if (patternType === 13) {
+canyons.push(new Canyon(startX, 600));
+for(let i=0; i<4; i++) {
+platforms.push(new Platform(startX + 50 + (i * 140), groundY - 50, 60));
+coins.push(new Coin(startX + 80 + (i * 140), groundY - 100, 'small'));
+}
+extraDelay = 60;
+}
+else if (patternType === 14) {
+platforms.push(new Platform(startX, groundY - 60, 80));
+platforms.push(new Platform(startX + 100, groundY - 120, 80));
+platforms.push(new Platform(startX + 200, groundY - 180, 80));
+platforms.push(new Platform(startX + 300, groundY - 120, 80));
+platforms.push(new Platform(startX + 400, groundY - 60, 80));
+spawnCoinArc(startX + 200, groundY - 220, 5, 'big');
+obstacles.push(new Obstacle(startX + 200, groundY, 1));
+if(Math.random() < 0.3) items.push(new PowerUp(startX + 200, groundY - 240, 'shield'));
+extraDelay = 50;
+}
+else if (patternType === 15) {
+platforms.push(new Platform(startX, groundY - 150, 200));
+canyons.push(new Canyon(startX + 180, 250));
+platforms.push(new Platform(startX + 350, groundY - 50, 150));
+obstacles.push(new Obstacle(startX + 450, groundY - 50, 1));
+spawnCoinRow(startX + 350, groundY - 100, 3, 'small');
+extraDelay = 40;
+}
+else if (patternType === 16) {
+let cWidth = 800;
+canyons.push(new Canyon(startX, cWidth));
+for(let i=0; i<5; i++) {
+platforms.push(new Platform(startX + 50 + (i * 160), groundY - 50 - (Math.random()*40), 60));
+coins.push(new Coin(startX + 80 + (i * 160), groundY - 120, 'big'));
+}
+extraDelay = 80;
+}
+else if (patternType === 17) {
+let cWidth = 700;
+canyons.push(new Canyon(startX, cWidth));
+platforms.push(new Platform(startX + 20, groundY - 150, 660));
+obstacles.push(new Obstacle(startX + 200, groundY - 150, 1));
+obstacles.push(new Obstacle(startX + 400, groundY - 150, 1));
+spawnCoinRow(startX + 200, groundY - 200, 3, 'small');
+if(Math.random() < 0.4) items.push(new PowerUp(startX + 300, groundY - 200, 'mushroom'));
+extraDelay = 70;
+}
+else if (patternType === 18) {
+let cWidth = 600;
+canyons.push(new Canyon(startX, cWidth));
+platforms.push(new Platform(startX, groundY - 80, 100));
+platforms.push(new Platform(startX + 350, groundY - 80, 100));
+spawnCoinArc(startX + 150, groundY - 150, 5, 'small');
+extraDelay = 60;
+}
+else if (patternType === 19) {
+obstacles.push(new Obstacle(startX, groundY, 5));
+obstacles.push(new Obstacle(startX + 400, groundY, 5));
+spawnCoinRow(startX + 200, groundY - 100, 5, 'small');
+platforms.push(new Platform(startX, groundY - 150, 500));
+extraDelay = 60;
+}
+else if (patternType === 20) {
+obstacles.push(new Obstacle(startX, groundY, 6));
+obstacles.push(new Obstacle(startX + 300, groundY - 50, 6));
+obstacles.push(new Obstacle(startX + 150, groundY, 1));
+extraDelay = 40;
+}
+}
+function init() {
+player = new Player();
+obstacles = [];
+platforms = [];
+canyons = [];
+coins = [];
+items = [];
+particles = [];
+score = 0;
+gameSpeed = GAME_SPEED_START;
+scoreEl.innerText = '0';
+spawnTimer = 0;
+totalFrames = 0;
+shieldStatusEl.classList.remove('visible');
+giantStatusEl.classList.remove('visible');
+backgroundStars = [];
+for(let i=0; i<60; i++) {
+backgroundStars.push({
+x: Math.random() * canvas.width,
+y: Math.random() * (canvas.height - 150),
+size: Math.random() * 2 + 1,
+speed: Math.random() * 0.5 + 0.1
+});
+}
+backgroundBuildings = [];
+for(let i=0; i<10; i++) {
+backgroundBuildings.push(new Building(Math.random() * canvas.width, 60, 100 + Math.random()*200, 0.2, 240));
+}
+}
+function startGame() {
+startScreen.classList.add('hidden');
+gameOverScreen.classList.add('hidden');
+init();
+isGameRunning = true;
+animate();
+}
+function resetGame() {
+startGame();
+}
+function gameOver() {
+isGameRunning = false;
+finalScoreEl.innerText = score;
+createExplosion(player.x + player.w/2, player.y + player.h/2);
+setTimeout(() => {
+gameOverScreen.classList.remove('hidden');
+}, 1000);
+}
+function drawFloor() {
+ctx.shadowBlur = 20;
+ctx.shadowColor = `hsl(${globalHue}, 100%, 50%)`;
+let drawX = 0;
+let sortedCanyons = [...canyons].sort((a,b) => a.x - b.x);
+for (let c of sortedCanyons) {
+if (c.x + c.w < 0) continue;
+if (c.x > drawX) {
+let w = c.x - drawX;
+if (w > canvas.width + 100) w = canvas.width + 100;
+ctx.fillStyle = '#fff';
+ctx.fillRect(drawX, groundY, w, 2);
+ctx.fillStyle = `hsl(${globalHue}, 100%, 50%)`;
+ctx.fillRect(drawX, groundY, w, 6);
+}
+drawX = Math.max(drawX, c.x + c.w);
+}
+if (drawX < canvas.width) {
+let w = canvas.width - drawX;
+ctx.fillStyle = '#fff';
+ctx.fillRect(drawX, groundY, w, 2);
+ctx.fillStyle = `hsl(${globalHue}, 100%, 50%)`;
+ctx.fillRect(drawX, groundY, w, 6);
+}
+ctx.shadowBlur = 0;
+}
+function drawBackground() {
+let bgGradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+bgGradient.addColorStop(0, '#000');
+bgGradient.addColorStop(1, '#1a1a2e');
+ctx.fillStyle = bgGradient;
+ctx.fillRect(0,0, canvas.width, canvas.height);
+ctx.fillStyle = '#fff';
+ctx.fillRect(0, groundY, canvas.width, 2);
+}
+function animate() {
+if (!isGameRunning) return;
+totalFrames++;
+globalHue = (globalHue + 0.1) % 360;
+let timeScale = player.isGiant ? 0.8 : 1.0;
+let originalSpeed = gameSpeed;
+gameSpeed = gameSpeed * timeScale;
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+spawnBuilding();
+drawBackground();
+drawFloor();
+spawnTimer++;
+let currentInterval = 110 - (gameSpeed * 2);
+if (currentInterval < 60) currentInterval = 60;
+if (spawnTimer > currentInterval + extraDelay) {
+spawnPattern();
+spawnTimer = Math.random() * -20;
+}
+platforms.forEach((p, i) => {
+p.update();
+p.draw();
+if(p.markedForDeletion) platforms.splice(i, 1);
+});
+canyons.forEach((c, i) => {
+c.update();
+if(c.markedForDeletion) canyons.splice(i, 1);
+});
+for (let i = items.length - 1; i >= 0; i--) {
+let item = items[i];
+item.update();
+item.draw();
+if(item.markedForDeletion || item.collected) {
+items.splice(i, 1);
+}
+}
+for (let i = coins.length - 1; i >= 0; i--) {
+let c = coins[i];
+c.update();
+c.draw();
+if(c.markedForDeletion || c.collected) {
+coins.splice(i, 1);
+}
+}
+obstacles.forEach((obs, index) => {
+obs.update();
+obs.draw();
+if (obs.markedForDeletion) {
+obstacles.splice(index, 1);
+}
+if (checkRectCollision(player, obs)) {
+if (player.hasShield) {
+obs.isDestroyed = true;
+createExplosion(obs.x + obs.w/2, obs.y + obs.h/2, '#fff');
+} else if (player.isGiant) {
+player.deactivateGiant();
+obs.isDestroyed = true;
+} else if (player.flashTimer <= 0) {
+gameOver();
+}
+}
+});
+player.update();
+player.draw();
+particles.forEach((p, index) => {
+p.update();
+p.draw();
+if (p.life <= 0) particles.splice(index, 1);
+});
+gameSpeed = originalSpeed;
+frameId = requestAnimationFrame(animate);
+}
+function handleJump() {
+if (isGameRunning) {
+player.jump();
+}
+}
+window.addEventListener('keydown', (e) => {
+if (e.code === 'Space' || e.code === 'ArrowUp') {
+handleJump();
+}
+});
+window.addEventListener('touchstart', (e) => {
+if(e.target.tagName !== 'BUTTON') {
+e.preventDefault();
+handleJump();
+}
+}, {passive: false});
+window.addEventListener('mousedown', (e) => {
+if(e.target.tagName !== 'BUTTON') {
+handleJump();
+}
+});
+resize();
+init();
+let bgGradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+bgGradient.addColorStop(0, '#000');
+bgGradient.addColorStop(1, '#1a1a2e');
+ctx.fillStyle = bgGradient;
+ctx.fillRect(0,0, canvas.width, canvas.height);
+ctx.fillStyle = '#fff';
+ctx.fillRect(0, groundY, canvas.width, 2);
+</script>
+</body>
+</html>
+                            "></iframe>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="section5" class="card p-4">
+                    <div class="card-body">
+                        <h2 class="card-title text-primary fw-bold mb-3"> 圖片作品 </h2>
+                        <div class="row g-2">
+                            <div class="col-4">
+                                <img src="HTML-Personal Site/car1.jpg" class="img-fluid rounded" alt= "超跑1"  onerror="this.src='https://placehold.co/300x200?text=Car+1';this.onerror=null;">
+                            </div>
+                            <div class="col-4">
+                                <img src="HTML-Personal Site/car2.jpg" class="img-fluid rounded" alt= "超跑2"  onerror="this.src='https://placehold.co/300x200?text=Car+2';this.onerror=null;">
+                            </div>
+                            <div class="col-4">
+                                <img src="HTML-Personal Site/car3.jpg" class="img-fluid rounded" alt= "超跑3"  onerror="this.src='https://placehold.co/300x200?text=Car+3';this.onerror=null;">
+                            </div>
+                        </div>
+                        <p class="mt-2 text-muted small"> 用 Gemini 生成的夢幻超跑照 </p>
+                    </div>
+                </article>
+
+                <article id="section6" class="card p-4">
+                    <div class="card-body">
+                        <h2 class="card-title text-primary fw-bold mb-3"> 更多資訊 </h2>
+                        <dl class="row">
+                            <dt class="col-sm-3 text-primary"> 程式作品 </dt>
+                            <dd class="col-sm-9">
+                                <p class="mb-1"> Java 專案 (待更新) </p>
+                                <a href="#" class="btn btn-sm btn-outline-dark">👉 GitHub 查看程式碼</a>
+                            </dd>
+                            <dt class="col-sm-3 text-primary mt-3"> 志工經歷 </dt>
+                            <dd class="col-sm-9 mt-3"> 北市太平國小輔導教學志工，資歷 1 年 </dd>
+                        </dl>
+
+                        <div class="alert alert-light border mt-3">
+                            <details>
+                                <summary class="fw-bold text-danger cursor-pointer"> 建議別點開 (彩蛋) </summary>
+                                <p class="mt-2"> 唉呦你幹嘛~唉呦 </p>
+                                <div class="d-flex gap-2 flex-wrap">
+                                    <img src="HTML-Personal Site/chicken1.jpg" width="100" class="rounded" onerror="this.src='https://placehold.co/100x100?text=Egg';this.onerror=null;">
+                                    <img src="HTML-Personal Site/chicken2.jpg" width="100" class="rounded" onerror="this.src='https://placehold.co/100x100?text=Egg';this.onerror=null;">
+                                    <img src="HTML-Personal Site/chicken3.jpg" width="100" class="rounded" alt="Annoying Image 3" onerror="this.src='https://placehold.co/100x100?text=Egg';this.onerror=null;">
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </article>
+            </main>
+        </div>
+    </div>
+
+    <footer id="contact" class="text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-1"> 聯絡我們： <a href="mailto:tsaistephen0709@gmail.com" class="text-white text-decoration-underline">tsaistephen0709@gmail.com</a></p>
+            <time datetime="2025-11-24" class="d-block mb-2 text-white-50 small"> 最後更新日期：2025年11月24日 </time>
+            <p class="mb-0 text-white-50">&copy; 2025 Steven's Blog. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
